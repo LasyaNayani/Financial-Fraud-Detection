@@ -14,11 +14,14 @@ The data was sourced from Kaggle (PaySim), a synthetic dataset that simulates mo
 
 This Gradient Boosting model was the top performer. It was faster to train than the Random Forest and caught the highest number of fraudsters (1,637 out of 1,643), missing only 6 cases in the entire test set.
 
+Before finalizing the models, I used SHAP (SHapley Additive exPlanations). Machine learning models like XGBoost can be "black boxes" that give an answer without an explanation. I included SHAP to provide transparency. In a real bank, you cannot block a customer’s account without a reason; SHAP allows us to see exactly how much features like Balance Errors pushed the model toward a fraud verdict. This ensures the model is making decisions based on logical red flags rather than random noise.
+
 **Final Conclusion**
 
 I chose XGBoost as the final model for this project. In a banking environment, the most expensive mistake is missing a thief. XGBoost proved to be the most "alert" model with the highest catch rate, while still maintaining exceptional precision to protect the customer experience.
 
-🚀 **Google Colab Notebook:**  
-👉 [Open the full implementation in Colab](https://colab.research.google.com/drive/1PMffh3QkrnyDEnP4U-U-CiEfmvQeNXNf?usp=sharing)
+🚀 **Open and run the notebook in Google Colab**
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PMffh3QkrnyDEnP4U-U-CiEfmvQeNXNf?usp=sharing)
 
 
